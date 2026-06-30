@@ -4,7 +4,7 @@ A low-cost, open-architecture, MAVLink-compatible telemetry bridge for unmanned 
 
 This was developed as an undergraduate graduation project in Electrical & Electronics Engineering at Istanbul Sabahattin Zaim University.
 
-![System architecture](docs/images/system_architecture.png)
+![System architecture](assests/system_architecture.png)
 
 ---
 
