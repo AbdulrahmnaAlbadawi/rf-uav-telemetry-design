@@ -107,26 +107,7 @@ These were taken indoors through walls in an interference-heavy environment, so 
 
 ---
 
-## Current limitations
 
-This is an early-stage prototype. Several of the intended features remain on the roadmap rather than completed:
-
-- **Full parameter download** (the ~1100-parameter list) does not yet complete reliably — the bursty traffic it generates briefly saturates the narrow-band LoRa channel and the fixed-length timing slots. An adaptive timing approach is planned to address this.
-- **AES encryption** of the link was scoped but not yet implemented.
-- **A custom PCB** (replacing the breadboard setup) is designed for but not yet produced.
-- **Open-field range** has not yet been measured.
-
-The modular software structure is intended to make adding these on top of the existing base straightforward.
-
----
-
-## Roadmap
-
-1. Adaptive timing to fix reliable full-parameter download under bursty load
-2. Full MAVLink parameter/command integration end to end
-3. AES-128 link encryption
-4. Custom PCB design, fabrication, and on-hardware testing
-5. Open-field range, packet-loss, and data-integrity measurements
 
 ---
 
