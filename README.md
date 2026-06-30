@@ -24,7 +24,7 @@ The goal was therefore a domestic, open, reconfigurable alternative that student
 
 The system is a symmetric bridge: two identical units run the same firmware, with the air/ground role chosen at build time. Each unit takes a MAVLink stream in over a serial link and carries it across the LoRa physical layer to the other side.
 
-![Project features](docs/images/project_features.png)
+![Project features](assests/project_features.png)
 
 Key characteristics:
 
@@ -48,10 +48,10 @@ Key characteristics:
 
 The two units as assembled on breadboards for bring-up and testing:
 
-![UAV-side hardware](docs/images/hardware_uav_side.png)
+![UAV-side hardware](assests/hardware_uav_side.png)
 *Air side: Pixhawk + STM32F411RE + SX1278*
 
-![GCS-side hardware](docs/images/hardware_gcs_side.png)
+![GCS-side hardware](assests/hardware_gcs_side.png)
 *Ground side: STM32F411RE + SX1278*
 
 ---
@@ -60,7 +60,7 @@ The two units as assembled on breadboards for bring-up and testing:
 
 LoRa trades data rate against range through its spreading factor (SF), bandwidth, and coding rate. The project settled on **SF7 / BW125 / CR4-5**, which yields roughly **5.5 kbps** of useful throughput — comfortably enough to carry a trimmed-down MAVLink stream once the flight controller's telemetry is reduced to the essentials.
 
-![SF vs. data rate and range trade-off](docs/images/sf_tradeoff.png)
+![SF vs. data rate and range trade-off](assests/sf_tradeoff.png)
 
 Higher spreading factors extend range at the cost of throughput, leaving headroom to push for longer links in future field tests.
 
@@ -70,7 +70,7 @@ Higher spreading factors extend range at the cost of throughput, leaving headroo
 
 The bridge recognizes MAVLink packet boundaries at the byte level and re-frames them across the radio link. Both v1 (start byte `0xFE`) and v2 (start byte `0xFD`) frame formats are handled.
 
-![MAVLink v1 vs v2 frame structures](docs/images/mavlink_frames.png)
+![MAVLink v1 vs v2 frame structures](assests/mavlink_frames.png)
 
 ---
 
@@ -86,7 +86,7 @@ A working prototype of the telemetry bridge was demonstrated end to end (Pixhawk
 - A stable heartbeat connection established in Mission Planner, with live telemetry (position, altitude, battery voltage, VFR HUD) updating reliably at 1 Hz in both directions
 - Indoor range testing showed under 3% packet loss out to 50 m
 
-![Mission Planner connected to the bridge](docs/images/mission_planner.png)
+![Mission Planner connected to the bridge](assests/mission_planner.png)
 *Live telemetry through the bridge in Mission Planner*
 
 **Indoor range / signal measurements:**
@@ -103,7 +103,7 @@ These were taken indoors through walls in an interference-heavy environment, so 
 
 **Cost comparison** against the imported modules it aims to replace, on a logarithmic scale:
 
-![Unit cost comparison](docs/images/cost_comparison.png)
+![Unit cost comparison](assests/cost_comparison.png)
 
 ---
 
