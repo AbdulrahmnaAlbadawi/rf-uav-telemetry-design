@@ -14,7 +14,7 @@ UAV telemetry links are one of the most critical components of any drone after t
 
 Market research carried out for the project confirmed the gap: import volumes for the relevant customs categories have been climbing steadily, yet no domestic brand mass-produces a MAVLink/LoRa-compatible telemetry module. Academic efforts mostly stay at the prototype stage.
 
-![Import trend for remote-control radio devices](docs/images/import_trend.png)
+![Import trend for remote-control radio devices](assests/import_trend.png)
 
 The goal was therefore a domestic, open, reconfigurable alternative that students can actually learn from and build on.
 
